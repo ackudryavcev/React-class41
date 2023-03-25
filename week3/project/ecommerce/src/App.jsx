@@ -1,11 +1,10 @@
 import React from "react";
 import { FavoritesProvider } from "./components/FavoriteContext";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import MainPage from "./components/MainPage";
-import Favorites from "./components/Favorites";
-import ItemPage from "./components/ItemPage";
-import NotFoundPage from "./components/NotFoundPage";
+import Layout from "./pages/Layout";
+import MainPage from "./pages/MainPage";
+import ItemPage from "./pages/ItemPage";
+import Favorites from "./pages/Favorites";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           <Route index element={<MainPage />} />
           <Route path="favorites" element={<Favorites />} />
           <Route path="product/:id" element={<ItemPage />} />
-          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </FavoritesProvider>
